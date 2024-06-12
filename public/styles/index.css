@@ -4,3 +4,27 @@
     font-weight: 600;
     font-style: normal;
 }
+.profilePhoto{
+    border-radius: 50%;
+    height: 200px;
+}
+
+.interactions{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pbox {
+    border: black dashed;
+    transition: all 0.3s ease-in;
+}
+
+.pbox:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    border-color: #66afe9;
+    border: dashed;
+}
+
+.gap{
+    
+}
