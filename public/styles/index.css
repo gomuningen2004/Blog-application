@@ -20,11 +20,16 @@
 }
 
 .pbox:hover {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
-    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 10px rgba(0, 133, 242, 0.6);
+    border-color: #008cff;
     border: dashed;
 }
 
 .gap{
-    
+    margin-bottom: 3.7rem;
+}
+
+.newpost{
+    border: 0.05px solid #dee2e6;
+    padding: 20px;
 }

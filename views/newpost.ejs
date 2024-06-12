@@ -1,3 +1,23 @@
 <%- include('partials/header.ejs') %>
 
+<div class="container newpost rounded-4 card-body">
+    <form method="post" action="/posting">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title of post</label>
+            <input type="text" class="form-control" id="title" name="title">
+        </div>
+        <div class="mb-3">
+            <label for="subTitle" class="form-label">Sub-title of post</label>
+            <input type="text" class="form-control" id="subTitle" name="subTitle">
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">Content of post</label>
+            <textarea class="form-control" id="content" rows="10" name="content"></textarea>
+        </div>
+        <div class="d-grid gap-2 col-1 mx-auto">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
 <%- include('partials/footer.ejs') %>
