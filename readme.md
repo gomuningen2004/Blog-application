@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to blog-website 👋</h1>
+<h1 align="center">Welcome to my blog-website 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
@@ -6,23 +6,20 @@
   </a>
 </p>
 
-> A simple blog website
+> A simple blog website created using Node>JS and ExpressJS, EJS and Bootstrap.
 
 ## Install
 
-```sh
-npm install
-```
-
-## Run tests
+To install the Node.JS packaages just use the below command
 
 ```sh
-npm run test
+npm i
 ```
 
-## Author
 
-👤 **Govardhan**
+<!-- ## Author
+
+👤 **Govardhan** -->
 
 
 ## Show your support
