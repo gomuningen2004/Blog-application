@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> A simple blog website created using Node>JS and ExpressJS, EJS and Bootstrap.
+> A simple blog website created using Node.JS and ExpressJS, EJS and Bootstrap.
 
 ## Install
 
@@ -22,9 +22,9 @@ npm i
 👤 **Govardhan** -->
 
 
-## Show your support
+## If you like the application
 
 Give a ⭐️ if this project helped you!
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+<!-- ***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_   -->
