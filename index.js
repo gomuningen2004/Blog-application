@@ -8,7 +8,6 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
-const year = new Date().getFullYear();
 
 const posts = [{
   id : 1,
@@ -24,29 +23,19 @@ function addPost(title, subTitle, content){
   console.log(posts);
 }
 
-function deletePost(postId){
-  console.log(posts);
-  posts = list.filter((post) => posts.id !== postId);
-  console.log(posts);
-}
 
 app.get("/", (req, res) => {
-  res.render("index", {
-    currentYear: year,
+  res.render("index",{
     posts : posts
   });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", {
-    currentYear: year
-  });
+  res.render("about");
 });
 
 app.get("/newpost", (req, res) => {
-  res.render("newpost", {
-    currentYear: year
-  });
+  res.render("newpost");
 });
 
 app.post("/posting", (req, res)=> {
@@ -55,10 +44,20 @@ app.post("/posting", (req, res)=> {
   res.redirect("/");
 });
 
-app.delete("/deleting/:id", (req, res) => {
-  deletePost(parseInt(req.params.id));
-  res.sendStatus(204);
+app.delete('/deleting/:id', (req, res) => {
+  const postId = parseInt(req.params.id);
+  const postIndex = posts.findIndex(post => post.id === postId);
+
+  if (postIndex !== -1) {
+    posts.splice(postIndex, 1);
+    res.status(200).send({ message: 'Post deleted' });
+  } else {
+    res.status(404).send({ message: 'Post not found' });
+  }
+
+  console.log(posts);
 });
+
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
