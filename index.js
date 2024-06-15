@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
   res.render("index",{
     posts : posts
   });
+  console.log(posts);
 });
 
 app.get("/about", (req, res) => {
@@ -39,7 +40,6 @@ app.get("/newpost", (req, res) => {
 });
 
 app.post("/posting", (req, res)=> {
-  console.log(req.body);
   addPost(req.body.title, req.body.subTitle, req.body.content);
   res.redirect("/");
 });
@@ -55,9 +55,35 @@ app.delete('/deleting/:id', (req, res) => {
     res.status(404).send({ message: 'Post not found' });
   }
 
-  console.log(posts);
 });
 
+app.get("/editpost/:id", (req, res) => {
+  const postId = parseInt(req.params.id);
+  const post = posts.find(post => post.id === postId);
+
+  if (post) {
+    res.render("editpost", {
+      post: post
+    });
+  } else {
+    res.status(404).send({ message: 'Post not found' });
+  }
+});
+
+
+app.post("/updatepost/:id", (req, res) => {
+  const postId = parseInt(req.params.id);
+  const postIndex = posts.findIndex(post => post.id === postId);
+
+  if (postIndex !== -1) {
+    posts[postIndex].title = req.body.title;
+    posts[postIndex].subTitle = req.body.subTitle;
+    posts[postIndex].content = req.body.content;
+    res.redirect("/");
+  } else {
+    res.status(404).send({ message: 'Post not found' });
+  }
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
