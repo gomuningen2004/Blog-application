@@ -18,9 +18,7 @@ const posts = [{
 
 function addPost(title, subTitle, content){
   const newlyPosted = {id : posts.length + 1, title, subTitle, content};
-  console.log(posts);
   posts.push(newlyPosted);
-  console.log(posts);
 }
 
 
@@ -28,7 +26,6 @@ app.get("/", (req, res) => {
   res.render("index",{
     posts : posts
   });
-  console.log(posts);
 });
 
 app.get("/about", (req, res) => {
@@ -86,6 +83,5 @@ app.post("/updatepost/:id", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
 });
 
