@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to my blog-website 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.4.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.5.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > A simple blog website created using Node.JS and ExpressJS, EJS and Bootstrap.
