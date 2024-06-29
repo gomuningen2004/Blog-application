@@ -16,8 +16,8 @@ const posts = [{
   author : "Govardhan"
 }];
 
-function addPost(title, subTitle, content){
-  const newlyPosted = {id : posts.length + 1, title, subTitle, content};
+function addPost(title, content, author){
+  const newlyPosted = {id : posts.length + 1, title, content, author};
   posts.push(newlyPosted);
 }
 
@@ -37,7 +37,7 @@ app.get("/newpost", (req, res) => {
 });
 
 app.post("/posting", (req, res)=> {
-  addPost(req.body.title, req.body.subTitle, req.body.content);
+  addPost(req.body.title, req.body.content, req.body.author);
   res.redirect("/");
 });
 
@@ -74,8 +74,8 @@ app.post("/updatepost/:id", (req, res) => {
 
   if (postIndex !== -1) {
     posts[postIndex].title = req.body.title;
-    posts[postIndex].subTitle = req.body.subTitle;
     posts[postIndex].content = req.body.content;
+    posts[postIndex].author = req.body.author;
     res.redirect("/");
   } else {
     res.status(404).send({ message: 'Post not found' });
