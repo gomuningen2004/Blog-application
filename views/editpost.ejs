@@ -6,13 +6,15 @@
             <label for="title" class="form-label">Title of post</label>
             <input type="text" class="form-control" id="title" name="title" value="<%= post.title %>">
         </div>
-        <div class="mb-3">
-            <label for="subTitle" class="form-label">Sub-title of post</label>
-            <input type="text" class="form-control" id="subTitle" name="subTitle" value="<%= post.subTitle %>">
-        </div>
+        
         <div class="mb-3">
             <label for="content" class="form-label">Content of post</label>
             <textarea class="form-control" id="content" rows="10" name="content"><%= post.content %></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="author" class="form-label">Sub-title of post</label>
+            <input type="text" class="form-control" id="author" name="author" value="<%= post.author %>">
         </div>
         <div class="d-grid gap-2 col-1 mx-auto">
             <button type="submit" class="btn btn-primary">Update</button>

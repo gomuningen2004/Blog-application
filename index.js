@@ -12,8 +12,8 @@ app.set('view engine', 'ejs');
 const posts = [{
   id : 1,
   title : "Welcome to Posts",
-  subTitle : "#firstPost #guide",
-  content : "Welcome, here you can post articles that you feel would be helpful to others. Currently image support isn't included but it will be implemented soon. And as there is no user login and other related features, please don't delete/modify existing posts of other potential users. Also include your name or any other form of identification so that others can know who posted the articles. And please checkout the Github repository if interested, improvements are welcome."
+  content : "Welcome, here you can post articles that you feel would be helpful to others. Currently image support isn't included but it will be implemented soon. And as there is no user login and other related features, please don't delete/modify existing posts of other potential users. And please checkout the Github repository if interested, improvements are welcome.",
+  author : "Govardhan"
 }];
 
 function addPost(title, subTitle, content){
